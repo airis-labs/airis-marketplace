@@ -31,6 +31,22 @@ plugin-name/
 
 Key rule: Only `plugin.json` goes inside `.claude-plugin/`. Everything else (skills, hooks, agents) stays outside.
 
+## Skill Invocation Modes
+
+Skills can be invoked two ways:
+- **Model-invoked**: Claude automatically triggers the skill when it seems relevant
+- **User-invoked**: You manually run `/skill-name`
+
+To make a skill only activate via slash command (not auto-triggered by Claude), add `disable-model-invocation: true` to the frontmatter:
+
+```markdown
+---
+name: my-skill
+description: What it does
+disable-model-invocation: true
+---
+```
+
 ## Creating a New Plugin
 
 1. Read the official docs:
