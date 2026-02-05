@@ -16,7 +16,7 @@ Add this marketplace to Claude Code:
 |--------|-------------|
 | `marp-slides` | Create HTML presentations from markdown slide files using Marp |
 | `ruff-hooks` | Automatic Python linting and formatting with Ruff on file edits |
-| `plan-review` | Slash command (`/plan-review`) to review plans for underspecified aspects |
+| `plan-review` | `/underspec` - identify gaps in work-in-progress plans, prompts, specs |
 
 ### Install a Plugin
 

@@ -41,7 +41,7 @@
     {
       "name": "plan-review",
       "source": "./plugins/plan-review",
-      "description": "Slash command to review plans for underspecified aspects",
+      "description": "Identify gaps in work-in-progress plans, prompts, specs, or any collaborative artifact",
       "version": "1.0.0",
       "author": {
         "name": "Airis"
@@ -49,8 +49,8 @@
       "repository": "https://github.com/airis-labs/airis-marketplace",
       "license": "MIT",
       "category": "productivity",
-      "tags": ["planning", "review", "requirements"],
-      "keywords": ["plan", "review", "ambiguity"]
+      "tags": ["planning", "review", "gaps", "prompts", "specs"],
+      "keywords": ["plan", "review", "underspec", "gaps"]
     }
   ]
 }

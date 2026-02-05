@@ -1,7 +1,7 @@
 {
   "name": "plan-review",
   "version": "1.0.0",
-  "description": "Slash command to review plans for underspecified aspects",
+  "description": "Identify gaps in work-in-progress plans, prompts, specs, or any collaborative artifact",
   "author": {
     "name": "Airis"
   },
