@@ -52,6 +52,7 @@ def main():
                     "120",
                     file_path,
                 ],
+                check=False,
                 capture_output=True,
                 text=True,
             )
