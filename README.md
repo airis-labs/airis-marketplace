@@ -26,10 +26,4 @@ Add this marketplace to Claude Code:
 
 ## Contributing
 
-To add a new plugin:
-
-1. Create a directory under `plugins/your-plugin-name/`
-2. Add `.claude-plugin/plugin.json` with plugin metadata
-3. Add your skills, commands, agents, or hooks
-4. Update the marketplace.json to include your plugin
-5. Submit a pull request
+See [CLAUDE.md](CLAUDE.md) for plugin development guidance.
