@@ -6,11 +6,12 @@ A Claude Code plugin marketplace maintained by Airis.
 
 A Claude Code plugin is a package that extends Claude's capabilities. Plugins can include:
 
-- **Skills**: Slash commands (`/skill-name`) that inject prompts or workflows
+- **Skills**: Slash commands (`/skill-name`) that inject prompts or workflows. Supports frontmatter config, supporting files, argument handling, and tool restrictions.
 - **Hooks**: Automated actions triggered by events (e.g., run linting after file edits)
 - **Agents**: Specialized subagents for specific tasks
 - **MCP Servers**: External tool integrations
-- **Commands**: Simple markdown-based user commands (legacy, prefer skills)
+
+Note: Commands (`.claude/commands/`) were merged into skills. Existing commands still work, but skills are the current standard.
 
 ## Plugin Structure
 
