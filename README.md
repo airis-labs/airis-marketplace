@@ -15,6 +15,7 @@ Add this marketplace to Claude Code:
 | Plugin | Description |
 |--------|-------------|
 | `marp-slides` | Create HTML presentations from markdown slide files using Marp |
+| `ruff-hooks` | Automatic Python linting and formatting with Ruff on file edits |
 
 ### Install a Plugin
 

@@ -23,6 +23,20 @@
       "category": "productivity",
       "tags": ["presentations", "slides", "markdown", "marp"],
       "keywords": ["presentation", "slides", "markdown"]
+    },
+    {
+      "name": "ruff-hooks",
+      "source": "./plugins/ruff-hooks",
+      "description": "Automatic Python linting and formatting with Ruff on file edits",
+      "version": "1.0.0",
+      "author": {
+        "name": "Airis"
+      },
+      "repository": "https://github.com/airis-labs/airis-marketplace",
+      "license": "MIT",
+      "category": "code-quality",
+      "tags": ["python", "linting", "formatting", "ruff", "hooks"],
+      "keywords": ["python", "ruff", "lint", "format"]
     }
   ]
 }

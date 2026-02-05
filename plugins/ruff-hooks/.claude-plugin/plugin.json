@@ -1,0 +1,27 @@
+{
+  "name": "ruff-hooks",
+  "version": "1.0.0",
+  "description": "Automatic Python linting and formatting with Ruff on file edits",
+  "author": {
+    "name": "Airis"
+  },
+  "license": "MIT",
+  "keywords": ["python", "ruff", "linting", "formatting", "hooks"],
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/ruff_check.py"
+          },
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/scripts/ruff_format.py"
+          }
+        ]
+      }
+    ]
+  }
+}
