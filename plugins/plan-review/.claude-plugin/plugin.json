@@ -1,0 +1,10 @@
+{
+  "name": "plan-review",
+  "version": "1.0.0",
+  "description": "Slash command to review plans for underspecified aspects",
+  "author": {
+    "name": "Airis"
+  },
+  "license": "MIT",
+  "keywords": ["planning", "review", "requirements"]
+}

@@ -37,6 +37,20 @@
       "category": "code-quality",
       "tags": ["python", "linting", "formatting", "ruff", "hooks"],
       "keywords": ["python", "ruff", "lint", "format"]
+    },
+    {
+      "name": "plan-review",
+      "source": "./plugins/plan-review",
+      "description": "Slash command to review plans for underspecified aspects",
+      "version": "1.0.0",
+      "author": {
+        "name": "Airis"
+      },
+      "repository": "https://github.com/airis-labs/airis-marketplace",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": ["planning", "review", "requirements"],
+      "keywords": ["plan", "review", "ambiguity"]
     }
   ]
 }
