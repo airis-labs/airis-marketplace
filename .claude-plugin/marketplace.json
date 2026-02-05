@@ -1,0 +1,28 @@
+{
+  "name": "airis-marketplace",
+  "owner": {
+    "name": "Airis",
+    "url": "https://github.com/airis-labs"
+  },
+  "metadata": {
+    "description": "Airis plugins marketplace for Claude Code",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "marp-slides",
+      "source": "./plugins/marp-slides",
+      "description": "Create HTML presentations from markdown slide files using Marp",
+      "version": "1.0.0",
+      "author": {
+        "name": "Airis"
+      },
+      "repository": "https://github.com/airis-labs/airis-marketplace",
+      "license": "MIT",
+      "category": "productivity",
+      "tags": ["presentations", "slides", "markdown", "marp"],
+      "keywords": ["presentation", "slides", "markdown"]
+    }
+  ]
+}

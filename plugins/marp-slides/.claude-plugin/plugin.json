@@ -1,0 +1,8 @@
+{
+  "name": "marp-slides",
+  "version": "1.0.0",
+  "description": "Create HTML presentations from markdown slide files using Marp",
+  "author": {
+    "name": "Lior Uzan"
+  }
+}
