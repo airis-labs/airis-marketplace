@@ -116,7 +116,6 @@ def main():
                     ),
                     file_path,
                 ],
-                check=False,
                 capture_output=True,
                 text=True,
             )
