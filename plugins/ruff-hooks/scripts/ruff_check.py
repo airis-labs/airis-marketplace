@@ -52,7 +52,7 @@ def main():
                     "ruff",
                     "check",
                     "--fix",
-                    "--select",
+                    "--extend-select",
                     # Combine all selected rules into a single comma-separated string
                     ",".join(
                         [
@@ -91,7 +91,7 @@ def main():
                             "PT",  # pytest-style: pytest best practices
                         ]
                     ),
-                    "--ignore",
+                    "--extend-ignore",
                     # Combine all ignored rules into a single comma-separated string
                     ",".join(
                         [

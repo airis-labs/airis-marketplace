@@ -7,6 +7,7 @@ This hook runs after Edit, Write, or MultiEdit operations and applies ruff forma
 import json
 import subprocess
 import sys
+from pathlib import Path
 
 # Exit code constants
 HOOK_SUCCESS = 0  # Continue normally
@@ -15,6 +16,23 @@ HOOK_WARN = 1  # Show output but don't block
 # Ruff format exit codes
 RUFF_SUCCESS = 0
 RUFF_ERROR = 2  # Format doesn't use exit code 1
+
+
+def has_ruff_config(file_path):
+    """Check if a ruff config exists in the project by walking up from the file."""
+    current = Path(file_path).resolve().parent
+    for directory in [current, *current.parents]:
+        if (directory / "ruff.toml").is_file() or (directory / ".ruff.toml").is_file():
+            return True
+        pyproject = directory / "pyproject.toml"
+        if pyproject.is_file():
+            try:
+                content = pyproject.read_text()
+                if "[tool.ruff]" in content:
+                    return True
+            except OSError:
+                pass
+    return False
 
 
 def print_output(stdout, stderr, stdout_to_stderr=False):
@@ -42,16 +60,16 @@ def main():
             print("Ruff format: Not a python file, skipping.", file=sys.stderr)
             sys.exit(HOOK_SUCCESS)
 
+        # Build command: use --line-length only as fallback when no project config exists
+        cmd = ["ruff", "format"]
+        if not has_ruff_config(file_path):
+            cmd += ["--line-length", "120"]
+        cmd.append(file_path)
+
         # Run ruff format
         try:
             format_result = subprocess.run(
-                [
-                    "ruff",
-                    "format",
-                    "--line-length",
-                    "120",
-                    file_path,
-                ],
+                cmd,
                 check=False,
                 capture_output=True,
                 text=True,

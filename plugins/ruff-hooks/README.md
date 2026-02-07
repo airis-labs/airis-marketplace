@@ -42,6 +42,20 @@ Formats Python files with 120-character line length.
 /plugin install ruff-hooks@airis-marketplace
 ```
 
+## Project Config Integration
+
+The plugin's rules are **additive** with your project's ruff configuration (`pyproject.toml`, `ruff.toml`, or `.ruff.toml`):
+
+- **Check**: Uses `--extend-select` and `--extend-ignore`, so your project's rules are merged with the plugin defaults (not replaced)
+- **Format**: If a ruff config exists in your project, the plugin defers to it entirely (e.g., your `line-length` setting wins). The `--line-length 120` default only applies when no project config is found.
+
+To disable a rule the plugin adds, add it to your project's `ignore` list (since `extend-select` is additive-only, you can't un-select rules — but `ignore` takes precedence):
+
+```toml
+[tool.ruff.lint]
+ignore = ["PT"]  # Suppresses pytest rules added by the plugin
+```
+
 ## Behavior
 
 - **Python files only**: Hooks skip non-Python files silently
